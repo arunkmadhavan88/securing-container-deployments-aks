@@ -1,0 +1,128 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "debian",
+      "Name": "11.6"
+    },
+    "ImageID": "sha256:bd44fa32af3693b0e03f2f3a0f484a689067734a0f2e467b69e9ea254a9793bc",
+    "DiffIDs": [
+      "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282",
+      "sha256:38548645fc3e3496b3b12e861b1b542f31c6182eba3b9cb90a14913ed396b5fd",
+      "sha256:98615eb38dcf1f96d46ea517a35cb8b8373d16ef1028c427bb856d0f59dc8e74",
+      "sha256:518be7433092c56a3a6303e2b310f203202f5cc030fa35e6ba7954a9a4ae258e",
+      "sha256:51dcefc324c05afb409904fb644b1e9e6d4602196b8c61f14bcc3af39121ce14",
+      "sha256:fab2465aa012e9d41c6250bea32a65ed260e292d550892d7a976be55a4e264bd",
+      "sha256:e74798d1eb0bade43ae5973e89163ca8d0421d53f8e997376ad1a0ba2b2e4541"
+    ],
+    "RepoTags": [
+      "exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched"
+    ],
+    "RepoDigests": [
+      "exampleacr12345678.azurecr.io/azure-voting-app-rust@sha256:957ad99a1c69d07b83c6f90cf5f26bc55e39b41204ad705c104572f21e34deb7"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2023-05-26T14:13:52.467634646-04:00",
+      "history": [
+        {
+          "created": "2023-04-12T00:19:55Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:f2d012660f882f319a5878a3f9ce285f488b8f90fad49ad238541cf72089e035 in / "
+        },
+        {
+          "created": "2023-04-12T00:19:56Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"bash\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-05-26T18:08:31Z",
+          "created_by": "WORKDIR /app",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:08:34Z",
+          "created_by": "RUN /bin/sh -c USER=root apt update -y # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:08:36Z",
+          "created_by": "RUN /bin/sh -c USER=root apt install libpq5 -y # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "COPY /code/target/release/azure-voting-app-rust azure-voting-app-rust # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "COPY static static # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "USER 1001",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "ENV PORT=8080",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "EXPOSE map[8080/tcp:{}]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "CMD [\"/app/azure-voting-app-rust\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-05-26T18:59:13Z",
+          "created_by": "mount / from exec sh -c apt install --no-install-recommends --allow-change-held-packages -y ncurses-bin libsystemd0 libtinfo6 libudev1 ncurses-base \u0026\u0026 apt clean -y",
+          "comment": "buildkit.exporter.image.v0"
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282",
+          "sha256:38548645fc3e3496b3b12e861b1b542f31c6182eba3b9cb90a14913ed396b5fd",
+          "sha256:98615eb38dcf1f96d46ea517a35cb8b8373d16ef1028c427bb856d0f59dc8e74",
+          "sha256:518be7433092c56a3a6303e2b310f203202f5cc030fa35e6ba7954a9a4ae258e",
+          "sha256:51dcefc324c05afb409904fb644b1e9e6d4602196b8c61f14bcc3af39121ce14",
+          "sha256:fab2465aa012e9d41c6250bea32a65ed260e292d550892d7a976be55a4e264bd",
+          "sha256:e74798d1eb0bade43ae5973e89163ca8d0421d53f8e997376ad1a0ba2b2e4541"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "/app/azure-voting-app-rust"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PORT=8080"
+        ],
+        "User": "1001",
+        "WorkingDir": "/app",
+        "ArgsEscaped": true
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched (debian 11.6)",
+      "Class": "os-pkgs",
+      "Type": "debian"
+    }
+  ]
+}

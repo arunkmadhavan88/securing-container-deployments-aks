@@ -1,0 +1,487 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "debian",
+      "Name": "11.6"
+    },
+    "ImageID": "sha256:42809c1ae8cc7568e61b0c2416d86d20b87df84a1c40a03b52b52f9e41ef402f",
+    "DiffIDs": [
+      "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282",
+      "sha256:38548645fc3e3496b3b12e861b1b542f31c6182eba3b9cb90a14913ed396b5fd",
+      "sha256:98615eb38dcf1f96d46ea517a35cb8b8373d16ef1028c427bb856d0f59dc8e74",
+      "sha256:518be7433092c56a3a6303e2b310f203202f5cc030fa35e6ba7954a9a4ae258e",
+      "sha256:51dcefc324c05afb409904fb644b1e9e6d4602196b8c61f14bcc3af39121ce14",
+      "sha256:fab2465aa012e9d41c6250bea32a65ed260e292d550892d7a976be55a4e264bd"
+    ],
+    "RepoTags": [
+      "test-app:1.0",
+      "exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha"
+    ],
+    "RepoDigests": [
+      "exampleacr12345678.azurecr.io/azure-voting-app-rust@sha256:c7bbaf11e98c1376e36c767dc03b4f9d0bde032cba3fac6a67eea009c57f03aa"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2023-05-26T14:13:52.467634646-04:00",
+      "history": [
+        {
+          "created": "2023-04-12T00:19:55Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:f2d012660f882f319a5878a3f9ce285f488b8f90fad49ad238541cf72089e035 in / "
+        },
+        {
+          "created": "2023-04-12T00:19:56Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"bash\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-05-26T18:08:31Z",
+          "created_by": "WORKDIR /app",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:08:34Z",
+          "created_by": "RUN /bin/sh -c USER=root apt update -y # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:08:36Z",
+          "created_by": "RUN /bin/sh -c USER=root apt install libpq5 -y # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "COPY /code/target/release/azure-voting-app-rust azure-voting-app-rust # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "COPY static static # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "USER 1001",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "ENV PORT=8080",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "EXPOSE map[8080/tcp:{}]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-05-26T18:13:52Z",
+          "created_by": "CMD [\"/app/azure-voting-app-rust\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282",
+          "sha256:38548645fc3e3496b3b12e861b1b542f31c6182eba3b9cb90a14913ed396b5fd",
+          "sha256:98615eb38dcf1f96d46ea517a35cb8b8373d16ef1028c427bb856d0f59dc8e74",
+          "sha256:518be7433092c56a3a6303e2b310f203202f5cc030fa35e6ba7954a9a4ae258e",
+          "sha256:51dcefc324c05afb409904fb644b1e9e6d4602196b8c61f14bcc3af39121ce14",
+          "sha256:fab2465aa012e9d41c6250bea32a65ed260e292d550892d7a976be55a4e264bd"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "/app/azure-voting-app-rust"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PORT=8080"
+        ],
+        "User": "1001",
+        "WorkingDir": "/app",
+        "ArgsEscaped": true
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha (debian 11.6)",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2022-3821",
+          "PkgID": "libsystemd0@247.3-7+deb11u1",
+          "PkgName": "libsystemd0",
+          "InstalledVersion": "247.3-7+deb11u1",
+          "FixedVersion": "247.3-7+deb11u2",
+          "Layer": {
+            "DiffID": "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-3821",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "systemd: buffer overrun in format_timespan() function",
+          "Description": "An off-by-one Error issue was discovered in Systemd in format_timespan() function of time-util.c. An attacker could supply specific values for time and accuracy that leads to buffer overrun in format_timespan(), leading to a Denial of Service.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-193"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2023:0336",
+            "https://access.redhat.com/security/cve/CVE-2022-3821",
+            "https://bugzilla.redhat.com/2139327",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2139327",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3821",
+            "https://errata.almalinux.org/9/ALSA-2023-0336.html",
+            "https://errata.rockylinux.org/RLSA-2023:0336",
+            "https://github.com/systemd/systemd/commit/9102c625a673a3246d7e73d8737f3494446bad4e",
+            "https://github.com/systemd/systemd/issues/23928",
+            "https://github.com/systemd/systemd/pull/23933",
+            "https://linux.oracle.com/cve/CVE-2022-3821.html",
+            "https://linux.oracle.com/errata/ELSA-2023-0336.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RVBQC2VLSDVQAPJTEMTREXDL4HYLXG2P/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-3821",
+            "https://security.gentoo.org/glsa/202305-15",
+            "https://ubuntu.com/security/notices/USN-5928-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-3821"
+          ],
+          "PublishedDate": "2022-11-08T22:15:00Z",
+          "LastModifiedDate": "2023-05-03T12:16:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-4415",
+          "PkgID": "libsystemd0@247.3-7+deb11u1",
+          "PkgName": "libsystemd0",
+          "InstalledVersion": "247.3-7+deb11u1",
+          "FixedVersion": "247.3-7+deb11u2",
+          "Layer": {
+            "DiffID": "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-4415",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "systemd: local information leak due to systemd-coredump not respecting fs.suid_dumpable kernel setting",
+          "Description": "A vulnerability was found in systemd. This security flaw can cause a local information leak due to systemd-coredump not respecting the fs.suid_dumpable kernel setting.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2023:0954",
+            "https://access.redhat.com/security/cve/CVE-2022-4415",
+            "https://bugzilla.redhat.com/2149063",
+            "https://bugzilla.redhat.com/2155515",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2149063",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2155515",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4415",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45873",
+            "https://errata.almalinux.org/9/ALSA-2023-0954.html",
+            "https://errata.rockylinux.org/RLSA-2023:0954",
+            "https://github.com/systemd/systemd/commit/b7641425659243c09473cd8fb3aef2c0d4a3eb9c",
+            "https://linux.oracle.com/cve/CVE-2022-4415.html",
+            "https://linux.oracle.com/errata/ELSA-2023-0954.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-4415",
+            "https://ubuntu.com/security/notices/USN-5928-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-4415",
+            "https://www.openwall.com/lists/oss-security/2022/12/21/3"
+          ],
+          "PublishedDate": "2023-01-11T15:15:00Z",
+          "LastModifiedDate": "2023-02-02T16:19:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-29458",
+          "PkgID": "libtinfo6@6.2+20201114-2",
+          "PkgName": "libtinfo6",
+          "InstalledVersion": "6.2+20201114-2",
+          "FixedVersion": "6.2+20201114-2+deb11u1",
+          "Layer": {
+            "DiffID": "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-29458",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "ncurses: segfaulting OOB read",
+          "Description": "ncurses 6.3 before patch 20220416 has an out-of-bounds read and segmentation violation in convert_strings in tinfo/read_entry.c in the terminfo library.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "V2Score": 5.8,
+              "V3Score": 7.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+              "V3Score": 6.1
+            }
+          },
+          "References": [
+            "http://seclists.org/fulldisclosure/2022/Oct/41",
+            "https://access.redhat.com/security/cve/CVE-2022-29458",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458",
+            "https://invisible-island.net/ncurses/NEWS.html#t20220416",
+            "https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html",
+            "https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html",
+            "https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+            "https://support.apple.com/kb/HT213488",
+            "https://ubuntu.com/security/notices/USN-5477-1",
+            "https://ubuntu.com/security/notices/USN-6099-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-29458"
+          ],
+          "PublishedDate": "2022-04-18T21:15:00Z",
+          "LastModifiedDate": "2022-11-08T19:46:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-3821",
+          "PkgID": "libudev1@247.3-7+deb11u1",
+          "PkgName": "libudev1",
+          "InstalledVersion": "247.3-7+deb11u1",
+          "FixedVersion": "247.3-7+deb11u2",
+          "Layer": {
+            "DiffID": "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-3821",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "systemd: buffer overrun in format_timespan() function",
+          "Description": "An off-by-one Error issue was discovered in Systemd in format_timespan() function of time-util.c. An attacker could supply specific values for time and accuracy that leads to buffer overrun in format_timespan(), leading to a Denial of Service.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-193"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2023:0336",
+            "https://access.redhat.com/security/cve/CVE-2022-3821",
+            "https://bugzilla.redhat.com/2139327",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2139327",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3821",
+            "https://errata.almalinux.org/9/ALSA-2023-0336.html",
+            "https://errata.rockylinux.org/RLSA-2023:0336",
+            "https://github.com/systemd/systemd/commit/9102c625a673a3246d7e73d8737f3494446bad4e",
+            "https://github.com/systemd/systemd/issues/23928",
+            "https://github.com/systemd/systemd/pull/23933",
+            "https://linux.oracle.com/cve/CVE-2022-3821.html",
+            "https://linux.oracle.com/errata/ELSA-2023-0336.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RVBQC2VLSDVQAPJTEMTREXDL4HYLXG2P/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-3821",
+            "https://security.gentoo.org/glsa/202305-15",
+            "https://ubuntu.com/security/notices/USN-5928-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-3821"
+          ],
+          "PublishedDate": "2022-11-08T22:15:00Z",
+          "LastModifiedDate": "2023-05-03T12:16:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-4415",
+          "PkgID": "libudev1@247.3-7+deb11u1",
+          "PkgName": "libudev1",
+          "InstalledVersion": "247.3-7+deb11u1",
+          "FixedVersion": "247.3-7+deb11u2",
+          "Layer": {
+            "DiffID": "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-4415",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "systemd: local information leak due to systemd-coredump not respecting fs.suid_dumpable kernel setting",
+          "Description": "A vulnerability was found in systemd. This security flaw can cause a local information leak due to systemd-coredump not respecting the fs.suid_dumpable kernel setting.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2023:0954",
+            "https://access.redhat.com/security/cve/CVE-2022-4415",
+            "https://bugzilla.redhat.com/2149063",
+            "https://bugzilla.redhat.com/2155515",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2149063",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2155515",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4415",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45873",
+            "https://errata.almalinux.org/9/ALSA-2023-0954.html",
+            "https://errata.rockylinux.org/RLSA-2023:0954",
+            "https://github.com/systemd/systemd/commit/b7641425659243c09473cd8fb3aef2c0d4a3eb9c",
+            "https://linux.oracle.com/cve/CVE-2022-4415.html",
+            "https://linux.oracle.com/errata/ELSA-2023-0954.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-4415",
+            "https://ubuntu.com/security/notices/USN-5928-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-4415",
+            "https://www.openwall.com/lists/oss-security/2022/12/21/3"
+          ],
+          "PublishedDate": "2023-01-11T15:15:00Z",
+          "LastModifiedDate": "2023-02-02T16:19:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-29458",
+          "PkgID": "ncurses-base@6.2+20201114-2",
+          "PkgName": "ncurses-base",
+          "InstalledVersion": "6.2+20201114-2",
+          "FixedVersion": "6.2+20201114-2+deb11u1",
+          "Layer": {
+            "DiffID": "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-29458",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "ncurses: segfaulting OOB read",
+          "Description": "ncurses 6.3 before patch 20220416 has an out-of-bounds read and segmentation violation in convert_strings in tinfo/read_entry.c in the terminfo library.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "V2Score": 5.8,
+              "V3Score": 7.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+              "V3Score": 6.1
+            }
+          },
+          "References": [
+            "http://seclists.org/fulldisclosure/2022/Oct/41",
+            "https://access.redhat.com/security/cve/CVE-2022-29458",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458",
+            "https://invisible-island.net/ncurses/NEWS.html#t20220416",
+            "https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html",
+            "https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html",
+            "https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+            "https://support.apple.com/kb/HT213488",
+            "https://ubuntu.com/security/notices/USN-5477-1",
+            "https://ubuntu.com/security/notices/USN-6099-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-29458"
+          ],
+          "PublishedDate": "2022-04-18T21:15:00Z",
+          "LastModifiedDate": "2022-11-08T19:46:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-29458",
+          "PkgID": "ncurses-bin@6.2+20201114-2",
+          "PkgName": "ncurses-bin",
+          "InstalledVersion": "6.2+20201114-2",
+          "FixedVersion": "6.2+20201114-2+deb11u1",
+          "Layer": {
+            "DiffID": "sha256:ae56c0c5405b3d38a59b5ec5dfe5db36e8b6ff6ca8595851f903cde13e709282"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-29458",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "ncurses: segfaulting OOB read",
+          "Description": "ncurses 6.3 before patch 20220416 has an out-of-bounds read and segmentation violation in convert_strings in tinfo/read_entry.c in the terminfo library.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "V2Score": 5.8,
+              "V3Score": 7.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+              "V3Score": 6.1
+            }
+          },
+          "References": [
+            "http://seclists.org/fulldisclosure/2022/Oct/41",
+            "https://access.redhat.com/security/cve/CVE-2022-29458",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458",
+            "https://invisible-island.net/ncurses/NEWS.html#t20220416",
+            "https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html",
+            "https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html",
+            "https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+            "https://support.apple.com/kb/HT213488",
+            "https://ubuntu.com/security/notices/USN-5477-1",
+            "https://ubuntu.com/security/notices/USN-6099-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-29458"
+          ],
+          "PublishedDate": "2022-04-18T21:15:00Z",
+          "LastModifiedDate": "2022-11-08T19:46:00Z"
+        }
+      ]
+    }
+  ]
+}

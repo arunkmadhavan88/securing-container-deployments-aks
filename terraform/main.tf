@@ -61,7 +61,7 @@ resource "azurerm_key_vault" "kv" {
     object_id = data.azuread_client_config.current.object_id
 
     key_permissions = [
-      "Get", "Sign"
+      "Get", "Sign", "List"
     ]
 
     secret_permissions = [
@@ -69,7 +69,7 @@ resource "azurerm_key_vault" "kv" {
     ]
 
     certificate_permissions = [
-      "Get", "Create", "Delete", "Purge"
+      "Get", "Create", "Delete", "Purge", "List"
     ]
   }
 }

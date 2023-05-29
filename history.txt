@@ -1,0 +1,1000 @@
+  219  ls -lrt
+  220  vi private-key.pem
+  221  ssh -i private-key.pem azureuser@20.220.144.159
+  222  chmod 644 private-key.pem 
+  223  ssh -i private-key.pem azureuser@20.220.144.159
+  224  chmod 400 private-key.pem 
+  225  ssh -i private-key.pem azureuser@20.220.144.159
+  226  az
+  227  az login --use-device-code
+  228  date
+  229  sudo hwclock -s
+  230  date
+  231  az login --use-device-code
+  232  az role assignment create   --assignee a232010e-820c-4083-83bb-3ace5fc29d0b   --role 4d97b98b-1d4f-4787-a291-c67834d212e7   --scope /subscriptions/c176d52a-aa60-4eb1-b8ee-5b7553a372ce/resourceGroups/rg-cassandra/providers/Microsoft.Network/virtualNetworks/Cassandra
+  233  mkdir terraform-azure-cassandra
+  234  code terraform-azure-cassandra/
+  235  ssh -i private-key.pem  azureuser@20.220.144.159
+  236  terraform plan
+  237  rm -rf ~/.azure/
+  238  rm -rf ~/.terraform.d
+  239  az login --use-device-code
+  240  sudo apt-gte install terraform
+  241  sudo apt-get install terraform
+  242  terraform init
+  243  terraform plan
+  244  terraform apply
+  245  cd ..
+  246  mkdir terraform-vm-cassandra
+  247  code terraform-vm-cassandra/
+  248  terraform init
+  249  cd terraform-azure-cassandra/
+  250  terraform init
+  251  terraform plan
+  252  terraform apply
+  253  ssh -i testadmin@10.0.1.8
+  254  terraform destroy -target=azurerm_resource_group.example
+  255  terraform init
+  256  terraform destroy -target=azurerm_resource_group.example
+  257  terraform init
+  258  terraform init -upgrade
+  259  terraform destroy -target=azurerm_resource_group.example
+  260  terraform fmt
+  261  terraform plan 
+  262  rm -rf .terraform
+  263  terraform init
+  264  terraform plan
+  265  ls -al
+  266  rm -rf terraform.tfstate
+  267  rm -rf .terraform*
+  268  ls -al
+  269  rm -rf terraform.tfstate.backup 
+  270  ls -al
+  271  terraform init
+  272  terraform plan
+  273  rm -rf .terraform*
+  274  ls -al
+  275  terraform init
+  276  terraform plan
+  277  ls -al
+  278  rm -rf .terraform*
+  279  az logout
+  280  az login --use-device-code
+  281  terraform init
+  282  terraform plan
+  283  rm -rf .terraform*
+  284  ls -al
+  285  az login --use-device-code
+  286  terraform init
+  287  erraform init
+  288  terraform plan
+  289  ls -al
+  290  rm -rf .terraform*
+  291  terraform init
+  292  terraform plan
+  293  rm -rf .terraform*
+  294  TF_LOG=trace terraform init
+  295  TF_LOG=trace terraform plan
+  296  terraform init
+  297  TF_LOG=trace terraform plan
+  298  az account show
+  299  terraform fmt
+  300  terraform init
+  301  terraform plan
+  302  cd ..
+  303  mkdir terraform-amac
+  304  rm -rf terraform-azure-cassandra/.terraform*
+  305  cp -R terraform-azure-cassandra/ terraform-amac/
+  306  cd terraform-amac/
+  307  ls -lrt
+  308  cp -R terraform-azure-cassandra/* .
+  309  ls -lrt
+  310  rm -rf terraform-azure-cassandra/
+  311  terraform init
+  312  terraform plan
+  313  az account show
+  314  ls -al
+  315  cd ..
+  316  ls -lrt
+  317  mv terraform-* checkouts/
+  318  mkdir terrafrom
+  319  cp terrafrom/ terraform
+  320  mv terrafrom/ terraform
+  321  mv terraform-* terraform
+  322  code terraform/
+  323  cd ~
+  324  cat experiment--vm_key.pem
+  325  vi experiment-vm_key.pem
+  326  cjmod 400 experiment-vm_key.pem 
+  327  chmod 400 experiment-vm_key.pem 
+  328  az role assignment create   --assignee a232010e-820c-4083-83bb-3ace5fc29d0b   --role 4d97b98b-1d4f-4787-a291-c67834d212e7   --scope /subscriptions/28bbe0ce-16a2-4497-8d6d-daf4be152aff/resourceGroups/experiment/providers/Microsoft.Network/virtualNetworks/experiment-vnet
+  329  az login --use-device-code
+  330  ssh -i experiment-vm_key.pem azureuser@4.205.22.29
+  331  ssh -i experiment-vm_key.pem azureuser@4.205.22.29
+  332  az account show
+  333  az managed-cassandra cluster list --resource-group experiment
+  334  #az managed-cassandra cluster update --resource-group experiment --cluster-name cassandra-ssl --client-certificates mycert.pem
+  335  vi mycert.pem
+  336  #az managed-cassandra cluster update --resource-group experiment --cluster-name cassandra-ssl --client-certificates mycert.pem
+  337  az managed-cassandra cluster update --resource-group experiment --cluster-name cassandra-ssl --client-certificates mycert.pem
+  338  az managed-cassandra cluster update --resource-group experiment --cluster-name cassandra-ssl --client-certificates mycert.pem BeginCert-MLXCF-EndCert
+  339  vi mycert.cert
+  340  az managed-cassandra cluster update --resource-group experiment --cluster-name cassandra-ssl --client-certificates mycert.cert BeginCert-MLXCF-EndCert
+  341  az managed-cassandra cluster update --resource-group experiment --cluster-name cassandra-ssl --client-certificates mycert.cert BeginCert-MLXCF-EndCert --debug
+  342  az managed-cassandra cluster update --resource-group experiment --cluster-name cassandra-ssl --client-certificates mycert.cert --debug
+  343  mysql -u root -p
+  344  keytool -genkey -alias myalias -keyalg RSA -keysize 2048 -validity 365 -keystore keystore.jks
+  345  sudo apt install openjdk-11-jdk
+  346  keytool -genkey -alias myalias -keyalg RSA -keysize 2048 -validity 365 -keystore keystore.jks
+  347  keytool -genkey -alias myalias -keyalg RSA -keysize 2048 -validity 365 -storetype JKS -keystore keystore.jks -storepass ""
+  348  keytool -genkey -alias myalias -keyalg RSA -keysize 2048 -validity 365 -storetype JKS -keystore keystore.jks
+  349  keytool -storepasswd keystore.jks 
+  350  keytool -storepasswd -new "" keystore.jks 
+  351  keytool -storepasswd -keystore keystore.jks 
+  352  keytool -storepasswd -new "" -keystore keystore.jks 
+  353  mysql -u root -p
+  354  mysql -h loyalist-internship-demo-db.mysql.database.azure.com -u loyalist -p "teamb1\!\@\#"
+  355  mysql -h loyalist-internship-demo-db.mysql.database.azure.com -u loyalist -p "*TeamB1*"
+  356  mysql -h loyalist-internship-demo-db.mysql.database.azure.com -u loyalist -p
+  357  pwd
+  358  mysql -h loyalist-internship-demo-db.mysql.database.azure.com -u loyalist -p
+  359  sudo apt-get update
+  360  sudo apt install curl
+  361  curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+  362  curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+  363  sudo apt-get update
+  364  sudo apt-get install mssql-tools unixodbc-dev
+  365  sudo apt-get update
+  366  sudo apt-get install mssql-tools
+  367  echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+  368  echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+  369  source ~/.bashrc
+  370  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'
+  371  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*' -q "SHOW DATABASES;"
+  372  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*' -i database/createtable_composite.sql 
+  373  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*' -i database/createtable_composite.sql -d khupragenics-db
+  374  vi createTable.sql
+  375  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*' -i createTable.sql -d khupragenics-db
+  376  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "select * from patients;"
+  377  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -i database/insert.sql 
+  378  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "'insert into PATIENTS (FILE_ID, NAME, PHONE_NUMBER, ASSIGNED_DOCTOR, USERNAME, PASSWORD) values (1, ''Jason Nguyen'', ''7-(429)773-2585'', ''Donald Riley'', ''driley0'', ''XBXA3XgR'')',NULL"
+  379  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "'insert into PATIENTS (FILE_ID, NAME, PHONE_NUMBER, ASSIGNED_DOCTOR, USERNAME, PASSWORD) values (1, 'Jason Nguyen', '7-(429)773-2585', 'Donald Riley', 'driley0', 'XBXA3XgR')',NULL"
+  380  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "insert into PATIENTS (FILE_ID, NAME, PHONE_NUMBER, ASSIGNED_DOCTOR, USERNAME, PASSWORD) values (1, 'Jason Nguyen', '7-(429)773-2585', 'Donald Riley', 'driley0', 'XBXA3XgR'),NULL"
+  381  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "insert into PATIENTS (FILE_ID, NAME, PHONE_NUMBER, ASSIGNED_DOCTOR, USERNAME, PASSWORD) values (1, 'Jason Nguyen', '7-(429)773-2585', 'Donald Riley', 'driley0', 'XBXA3XgR')"
+  382  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "insert into PATIENTS (NAME, PHONE_NUMBER, ASSIGNED_DOCTOR, USERNAME, PASSWORD) values ('Jason Nguyen', '7-(429)773-2585', 'Donald Riley', 'driley0', 'XBXA3XgR')"
+  383  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "drop table patients;"
+  384  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "select * from patients;"
+  385  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -i createTable.sql 
+  386  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -i database/insert.sql 
+  387  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "select * from patients;"
+  388  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "select top 100 * from patients;"
+  389  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -
+  390  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -i createTable.sql 
+  391  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "drop table patients;"
+  392  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -i createTable.sql 
+  393  sqlcmd -S khupragenics.database.windows.net -U loyalist -P '*TeamB1*'  -d khupragenics-db -q "select top 100 * from patients;"
+  394  cd ~
+  395  ssh -i experiment-vm_key.pem azureuser@4.205.22.29
+  396  az aks install-cli --debug
+  397  sudo az aks install-cli --debug
+  398  sudo apt-get install mysql-server
+  399  sudo mysql_secure_installation ~
+  400  mysql -u root 
+  401  service mysql status
+  402  service mysql start
+  403  sudo mysqld_safe --skip-grant-tables &
+  404  mysql -u root
+  405  sudo mysqld_safe --skip-grant-tables 
+  406  sudo systemctl stop mysql
+  407  sudo systemctl start mysql
+  408  mysql -u root
+  409  service mysql start
+  410  sudo systemctl start mysql.service
+  411  sudo apt-get remove mysql-server
+  412  sudo apt update
+  413  sudo apt install mysql-server
+  414  sudo systemctl start mysql.service
+  415  sudo mysql
+  416  sudo mysql -u root
+  417  sudo mysql
+  418  sudo mysql -u root
+  419  sudo mysql -u root -p password
+  420  sudo mysql
+  421  sudo mysql -u root
+  422  sudo mysql -u root -p 'password'
+  423  sudo apt-get remove mysql-server
+  424  sudo apt install mysql-server
+  425  bin/mysqld_safe --skip-grant-tables --user=mysql
+  426  mysqld_safe --skip-grant-tables --user=mysql
+  427  sudo mysqld_safe --skip-grant-tables --user=mysql
+  428  sudo mysql
+  429  sudo mysql -u root
+  430  mysql
+  431  sudo apt purge mysql-server
+  432  sudo mysql -u root
+  433  sudo mysql -u root -p password
+  434  sudo mysql
+  435  sudo mysql -p password
+  436  sudo mysql
+  437  sudo apt purge mysql-server
+  438  sudo apt purge mysql
+  439  sudo apt autoremove 
+  440  sudo apt install mysql-server
+  441  sudo mysql
+  442  sudo systemctl start mysql.service
+  443  sudo service mysql status
+  444  sudo service mysql start
+  445  sudo service mysql status
+  446  sudo mysql
+  447  sudo mysql -u root
+  448  sudo mysql -u root -p 
+  449  sudo mysql -u root -p password
+  450  sudo mysql
+  451  mysql -u root -p
+  452  sudo service mysql status
+  453  sudo mysql -u root -p
+  454  service mysql stop
+  455  killall -KILL mysql mysqld_safe mysqld
+  456  sudo killall -KILL mysql mysqld_safe mysqld
+  457  sudo killall -KILL mysqld_safe mysqld
+  458  sudo apt-get --yes purge mysql-server mysql-client
+  459  sudo apt-get --yes autoremove --purge
+  460  sudo apt-get autoclean
+  461  sudo deluser --remove-home mysql
+  462  sudo delgroup mysql
+  463  rm -rf /etc/apparmor.d/abstractions/mysql /etc/apparmor.d/cache/usr.sbin.mysqld /etc/mysql /var/lib/mysql /var/log/mysql* /var/log/upstart/mysql.log* /var/run/mysqld
+  464  sudo rm -rf /etc/apparmor.d/abstractions/mysql /etc/apparmor.d/cache/usr.sbin.mysqld /etc/mysql /var/lib/mysql /var/log/mysql* /var/log/upstart/mysql.log* /var/run/mysqld
+  465  rm ~/.mysql_history
+  466  sudo rm ~/.mysql_history
+  467  sudo awk -F : '{ print($6 "/.mysql_history"); }' /etc/passwd | xargs -r -d '\n' -- sudo rm -f --
+  468  sudo find / -name .mysql_history -delete
+  469  wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+  470  sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+  471  sudo apt update
+  472  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+  473  sudo apt update
+  474  sudo apt-cache policy mysql-server
+  475  sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+  476  mysql -u root -p
+  477  sudo mysql -u root -p
+  478  ls -lrt /var/run/mysqld/mysqld.sock
+  479  sudo mysql_secure_installation
+  480  sudo service mysql start
+  481  sudo mysql -u root -p
+  482  mkdir gowri
+  483  cd gowri/
+  484  mkdir java-app
+  485  cd java-app/
+  486  git clone https://github.com/arunkmadhavan88/java-servlet-login-and-display.git
+  487  code java-servlet-login-and-display/
+  488  ifconfig
+  489  ipconfig
+  490  sudo apt install ipconfig
+  491  sudo apt install ifconfig
+  492  ls -llrt
+  493  ls -lrt gowri/
+  494  ls -lrt
+  495  cd gowri/
+  496  mkdir project-khupragenics-tf
+  497  code project-khupragenics-tf/
+  498  az account show
+  499  terraform init
+  500  terraform plan
+  501  terraform apply -auto-approve
+  502  terraform destory
+  503  terraform destroy
+  504  terraform destroy -auto-approve
+  505  terraform plan
+  506  terraform apply -auto-approve
+  507  terraform destory
+  508  terraform destroy
+  509  terraform plan
+  510  terraform fmt
+  511  terraform plan
+  512  terraform fmt
+  513  terraform plan
+  514  terraform fmt
+  515  terraform plan
+  516  terraform apply -auto-approve
+  517  terraform plan
+  518  terraform apply -auto-approve
+  519  terraform fmt
+  520  terraform plan
+  521  az login --use-device-code
+  522  terraform plan
+  523  az account show
+  524  terraform plan
+  525  terraform fmt
+  526  terraform plan
+  527  terraform apply -auto-approve
+  528  terraform init
+  529  terraform plan
+  530  terraform init
+  531  terraform plan
+  532  terraform apply -auto-approve
+  533  terraform plan
+  534  terraform init
+  535  terraform plan
+  536  terraform apply -auto-approve
+  537  terraform plan
+  538  terraform apply -auto-approve
+  539  terraform destroy -auto-approve
+  540  terraform apply -auto-approve
+  541  terraform plan
+  542  terraform fmt
+  543  terraform plan
+  544  terraform apply -auto-approve
+  545  history | grep terraform
+  546  terraform destroy -auto-approve
+  547  terraform apply -auto-approve
+  548  terraform destroy -auto-approve
+  549  terraform apply -auto-approve
+  550  terraform destroy -auto-approve
+  551  terraform apply -auto-approve
+  552  terraform destroy -auto-approve
+  553  terraform plan
+  554  terraform apply -auto-approve
+  555  terraform plan
+  556  terraform apply -auto-approve
+  557  terraform fmt
+  558  terraform plan
+  559  terraform apply -auto-approve
+  560  terraform destroy -auto-approve
+  561  cd ..
+  562  ls -lrt
+  563  git clone https://github.com/arunkmadhavan88/khupragenics-web-app.git
+  564  code khupragenics-web-app/
+  565  cd -
+  566  terraform plan
+  567  terraform fmt
+  568  terraform plan
+  569  terraform apply -auto-approve
+  570  terraform plan
+  571  terraform fmt
+  572  terraform apply -auto-approve
+  573  terraform plan
+  574  terraform apply -auto-approve
+  575  terraform plan
+  576  terraform apply -auto-approve
+  577  terraform destroy -auto-approve
+  578  terraform plan
+  579  terraform apply -auto-approve
+  580  terraform plan
+  581  terraform fmt
+  582  terraform plan
+  583  terraform apply -auto-approve
+  584  terraform plan
+  585  terraform fmt
+  586  terraform plan
+  587  terraform fmt
+  588  terraform plan
+  589  terraform fmt
+  590  terraform plan
+  591  terraform apply -auto-approve
+  592  terraform plan
+  593  terraform apply -auto-approve
+  594  terraform plan
+  595  terraform fmt
+  596  terraform plan
+  597  terraform fmt
+  598  terraform plan
+  599  terraform apply -auto-approve
+  600  terraform destroy -auto-approve
+  601  terraform fmt
+  602  terraform plan
+  603  terraform fmt
+  604  terraform plan
+  605  terraform fmt
+  606  terraform plan
+  607  terraform fmt
+  608  terraform plan
+  609  terraform apply -auto-approve
+  610  terraform destroy -auto-approve
+  611  rm -rf .terraform*
+  612  terraform fmt
+  613  terraform init
+  614  terraform plan
+  615  terraform fmt
+  616  terraform plan
+  617  terraform apply -auto-approve
+  618  rm -rf .terraform
+  619  rm -rf .terraform*
+  620  terraform init
+  621  terraform plan
+  622  terraform apply -auto-approve
+  623  mkdir ../khupragenics-tf
+  624  ls -al
+  625  rm -rf .terraform*
+  626  rm -rf terraform.tfstate*
+  627  terraform init
+  628  terraform plan
+  629  terraform apply -auto-approve
+  630  terraform destroy -auto-approve
+  631  terraform apply -auto-approve
+  632  history | grep state
+  633  terraform import azurerm_source_control_token.khupragenics_git_token /providers/Microsoft.Web/sourceControls/GitHub
+  634  terraform apply -auto-approve
+  635  terraform fmt
+  636  terraform apply -auto-approve
+  637  terraform fmt
+  638  terraform plan
+  639  terraform apply -auto-approve
+  640  terraform plan
+  641  terraform apply -auto-approve
+  642  cd ..
+  643  ls -lrt
+  644  mkdir project-khupragenics-tf-khup
+  645  cp -R project-khupragenics-tf-new/ project-khupragenics-tf-khup/
+  646  cd project-khupragenics-tf-khup/
+  647  ls -lrt
+  648  cd ..
+  649  cd project-khupragenics-tf-khup/
+  650  az account t show
+  651  az account show
+  652  az account set --subscription khupragenics
+  653  az login --use-device-code
+  654  az account set --subscription ab0580f4-db02-47d0-90ae-b18dfd8e16bb
+  655  az account show
+  656  terraform init
+  657  terraform plan
+  658  terraform apply --auto-approve
+  659  terraform plan
+  660  terraform apply --auto-approve
+  661  terraform plan
+  662  terraform fmt
+  663  terraform plan
+  664  terraform apply --auto-approve
+  665  terraform plan
+  666  terraform apply --auto-approve
+  667  terraform destory --auto-approve
+  668  terraform destroy --auto-approve
+  669  terraform apply --auto-approve
+  670  terraform fmt
+  671  terraform plan
+  672  terraform apply --auto-approve
+  673  terraform fmt
+  674  terraform plan
+  675  terraform fmt
+  676  terraform plan
+  677  terraform fmt
+  678  terraform plan
+  679  terraform apply --auto-approve
+  680  terraform fmt
+  681  terraform plan
+  682  terraform apply --auto-approve
+  683  terraform fmt
+  684  terraform plan
+  685  terraform apply --auto-approve
+  686  terraform fmt
+  687  terraform plan
+  688  terraform apply --auto-approve
+  689  terraform fmt
+  690  terraform plan
+  691  terraform apply --auto-approve
+  692  terraform fmt
+  693  terraform apply --auto-approve
+  694  terraform plan
+  695  terraform apply --auto-approve
+  696  git pull
+  697  pwd
+  698  cd ..
+  699  git clone https://github.com/arunkmadhavan88/project-khupragenics-tf
+  700  ls -lrt
+  701  mkdir clone
+  702  cd clone/
+  703  git clone https://github.com/arunkmadhavan88/project-khupragenics-tf
+  704  cd project-khupragenics-tf/
+  705  cp -R ../../project-khupragenics-tf-khup/* .
+  706  ls -lrt
+  707  ls -al
+  708  rm -rf terraform.*
+  709  ls -lrt
+  710  git status
+  711  git add
+  712  git add .
+  713  git commit "AKM::Terraform module for khupragenics"
+  714  git commit -m "AKM::Terraform module for khupragenics"
+  715  git push origin master
+  716  git checkout -b ad-integration
+  717  cp ../../project-khupragenics-tf-new/main.tf .
+  718  git status
+  719  git add .
+  720  git commit -m "AKM::AD users related"
+  721  git push origin ad-integration 
+  722  docker ps
+  723  sudo apt-get update
+  724  sudo apt-get install -y   apt-transport-https   ca-certificates   curl   gnupg   lsb-release
+  725  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  726  echo   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  727    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  728  sudo apt-get update
+  729  sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+  730  sudo usermod -aG docker $USER
+  731  docker ps
+  732  service docker status
+  733  service docker start
+  734  sudo service docker start
+  735  service docker status
+  736  docker ps
+  737  sudo usermod -aG docker $USER
+  738  docker ps
+  739  chmod 777 /var/run/docker.sock
+  740  sudo chmod 777 /var/run/docker.sock
+  741  docker ps
+  742  docker build -t khupragenics .
+  743  docker images
+  744  docker run khupragenics
+  745  docker ps
+  746  docker run -p 8080:8080 khupragenics
+  747  az login --use-device-code
+  748  az acr login --name khupragenics.azurecr.io
+  749  docker login khupragenics.azurecr.io
+  750  docker images
+  751  docker tag khupragenics:latest khupragenics.azurecr.io/khupragenics:latest
+  752  docker push khupragenics.azurecr.io/khupragenics:latest
+  753  docker build -t khupragenics .
+  754  docker run -p 8080:8080 khupragenics
+  755  docker tag khupragenics:latest khupragenics.azurecr.io/khupragenics:latest
+  756  docker push khupragenics.azurecr.io/khupragenics:latest
+  757  git status
+  758  git add .
+  759  git commit -m "AKM:Dockerised the app"
+  760  git config --global user.email "arunkmadhavan88@gmail.com"
+  761  git config --global user.name "Arun Madhavan"
+  762  git commit -m "AKM:Dockerised the app"
+  763  docker push khupragenics.azurecr.io/khupragenics:latest
+  764  git push origin master
+  765  git pull
+  766  git push origin master
+  767  history | grep sql
+  768  sqlcmd -S khupragenicssqldb.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenics-db -q "show tables;"
+  769  sqlcmd -S khupragenicssqldb.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb -q "show tables;"
+  770  sqlcmd -S khupragenicssqlserver.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb -q "show tables;"
+  771  sqlcmd -S khupragenicssqlserver.database.windows.net -U dbtechuser@Khupragenicstest.onmicrosoft.com -P 'dbtuser123!'  -d khupragenicssqldb -q "show tables;"
+  772  sqlcmd -S khupragenicssqlserver.database.windows.net -U 'dbtechuser@Khupragenicstest.onmicrosoft.com' -P 'dbtuser123!'  -d khupragenicssqldb -q "show tables;"
+  773  sqlcmd -S khupragenicssqlserver.database.windows.net -U 'dbtechuser\@Khupragenicstest.onmicrosoft.com' -P 'dbtuser123!'  -d khupragenicssqldb -q "show tables;"
+  774  sqlcmd -S khupragenicssqlserver.database.windows.net -U 'dbtechuser@Khupragenicstest.onmicrosoft.com' -P 'dbtuser123!'  -d khupragenicssqldb -q "show tables;"
+  775  sqlcmd -S khupragenicssqlserver.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb -q "show tables;"
+  776  sqlcmd -S khupragenicssqlserver.database.windows.net -d khupragenicssqldb -
+  777  sqlcmd -S khupragenicssqlserver.database.windows.net -d khupragenicssqldb
+  778  history | grep sqlcmd
+  779  cd ..
+  780  ls -lrt
+  781  cd java-app/
+  782  ls -lrt
+  783  cd java-servlet-login-and-display/
+  784  ls -lrt
+  785  cd database/
+  786  ls -lrt
+  787  cat insert.sql 
+  788  cat createtable_composite.sql 
+  789  history | grep sql
+  790  sqlcmd -S khupragenicssqlserver.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb -i createtable_composite.sql 
+  791  vi sql_data.sql
+  792  sqlcmd -S khupragenicssqlserver.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb -i sql_data.sql 
+  793  docker login https://hub.docker.com/repository/docker/gowrilgr/khupragenics
+  794  docker login https://hub.docker.com
+  795  docker login
+  796  docker images
+  797  docker tag docker logout
+  798  docker logout
+  799  docker pull index.docker.io/gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  800  docker login index.docker.io
+  801  docker pull index.docker.io/gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  802  docker pull index.docker.io/v1/gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  803  docker pull https://index.docker.io/v1/gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  804  docker pull khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  805  docker logout
+  806  docker login index.docker.io
+  807  docker pull gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  808  docker pull khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  809  docker pull gowrilrg/gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  810  docker pull gowrilgr/gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  811  docker pull gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  812  docker pull gowrilgr/khupragenics
+  813  docker login 
+  814  docker pull gowrilgr/khupragenics
+  815  docker pull gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  816  dokcer logot
+  817  dokcer logout
+  818  docker logout
+  819  docker login https://index.docker.io/v1/
+  820  docker pull index.docker.io/gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda
+  821  docker images
+  822  docker run gowrilgr/khupragenics 
+  823  docker run gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda 
+  824  docker run gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda -p 8080:8080
+  825  docker run gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda -P 8080:8080
+  826  docker run -p 8080:8080 gowrilgr/khupragenics:a64f496eaca0f9ce8e4f27bd5342253538422dda 
+  827  cd ../../
+  828  cd ..
+  829  ls -lrt
+  830  cd khupragenics-web-app/
+  831  git pull
+  832  docker pull index.docker.io/gowrilgr/khupragenics:0fbed63f4120d48d5f54d850664e52de049e1c8f
+  833  docker run -p 8080:8080 gowrilgr/khupragenics:0fbed63f4120d48d5f54d850664e52de049e1c8f
+  834  docker run -p 8080:8080 gowrilgr/khupragenics:746faef662d5a76757ebf6bd0df3400e2b74b9a3
+  835  docker run -p 8080:8080 gowrilgr/khupragenics:a779b3476a1c69786ee22b8fa6a29cf5678755b5
+  836  docker run -p 8080:8080 gowrilgr/khupragenics:7e3b04dad1db4dadcb069fcc9d21516a0b1199d7
+  837  docker run -p 8080:8080 gowrilgr/khupragenics:1e106516249ce176fc9b38f9fd95f1fc2f5c64ca
+  838  az account show
+  839  sqlcmd -S khupragenicssqlserver.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb  
+  840  sqlcmd -S khupragenicssqlinstance.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb  
+  841  docker logout
+  842  docker login
+  843  docker run -p 8080:8080 gowrilgr/khupragenics:78d708723bbe6dfac8a2d0c58e12d291e77ae9d3
+  844  sqlcmd -S khupragenicssqlinstance.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb  
+  845  history | grep sqlcmd
+  846  sqlcmd -S khupragenicssqlinstance.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb  -q "select * from patients;"
+  847  sqlcmd -S khupragenicssqlserver.database.windows.net -U "" -P 'thisIsDog11'  -d khupragenicssqldb 
+  848  ls -lrt
+  849  cd -
+  850  cd java-app/java-servlet-login-and-display/database/
+  851  ls -lrt
+  852  sqlcmd -S khupragenicssqlinstance.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb  -i insert.sql 
+  853  sqlcmd -S khupragenicssqlinstance.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb  -i sql_data.sql 
+  854  sqlcmd -S khupragenicssqlinstance.database.windows.net -U khupragenics-sql-admin -P 'thisIsDog11'  -d khupragenicssqldb  -q "select * from patients;"
+  855  ping khupragenicssqlinstance.database.windows.net
+  856  terraform fmt
+  857  terraform plan
+  858  terraform init
+  859  terraform plan
+  860  terraform init
+  861  rm -rf .terraform*
+  862  terraform init
+  863  terraform plan
+  864  terraform version
+  865  cat ~/.bash_profile 
+  866  wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+  867  sudo apt update && sudo apt install terraform
+  868  terraform version
+  869  terraform plan
+  870  rm -rf .terraform*
+  871  terraform init
+  872  terraform plan
+  873  rm -rf .terraform*
+  874  terraform plan
+  875  terraform init
+  876  terraform plan
+  877  azure login --use-device-code
+  878  az login --use-device-code
+  879  terraform plan
+  880  rm -rf .terraform*
+  881  terraform init
+  882  terraform plan
+  883  terraform init
+  884  terraform plan
+  885  terraform apply
+  886  terraform plan
+  887  terraform apply
+  888  terraform plan
+  889  terraform apply
+  890  terraform plan
+  891  terraform apply
+  892  terraform fomrat
+  893  terraform fmt
+  894  terraform plan
+  895  terraform init -upgrade
+  896  terraform plan
+  897  terraform fmt
+  898  terraform plan
+  899  terraform fmt
+  900  terraform plan
+  901  terraform fmt
+  902  terraform plan
+  903  terraform fmt
+  904  terraform plan
+  905  rm -rf .terraform*
+  906  terraform init
+  907  terraform plan
+  908  terraform fmt
+  909  terraform plan
+  910  terraform fmt
+  911  terraform plan
+  912  terraform init
+  913  terraform plan
+  914  terraform init
+  915  terraform fmt
+  916  terraform plan
+  917  terraform fmt
+  918  terraform plan
+  919  terraform fmt
+  920  terraform plan
+  921  terraform fmt
+  922  terraform plan
+  923  terraform apply 
+  924  terraform fmt
+  925  terraform plan
+  926  terraform fmt
+  927  terraform plan
+  928  terraform fmt
+  929  terraform plan
+  930  terraform fmt
+  931  terraform plan
+  932  terraform apply
+  933  terraform --
+  934  terraform plan --destroy
+  935  terraform apply
+  936  terraform destroy
+  937  terraform fmt
+  938  terraform plan
+  939  terraform fmt
+  940  terraform plan
+  941  terraform fmt
+  942  terraform plan
+  943  terraform fmt
+  944  terraform plan
+  945  terraform fmt
+  946  terraform plan
+  947  terraform apply
+  948  terraform fmt
+  949  terraform plan
+  950  terraform apply
+  951  terraform plan
+  952  terraform apply
+  953  terraform plan
+  954  terraform init
+  955  terraform plan
+  956  terraform init
+  957  terraform plan
+  958  terraform init
+  959  terraform plan
+  960  terraform apply
+  961  terraform plan
+  962  terraform apply
+  963  terraform plan
+  964  terraform fmt
+  965  terraform plan
+  966  terraform apply
+  967  terraform fmt
+  968  terraform plan
+  969  terraform apply
+  970  terraform import /subscriptions/c176d52a-aa60-4eb1-b8ee-5b7553a372ce/resourceGroups/khupragenics-rg/providers/Microsoft.Web/sites/khupragenics-app
+  971  terraform 
+  972  terraform import azurerm_linux_web_app.khupragenics_app /subscriptions/c176d52a-aa60-4eb1-b8ee-5b7553a372ce/resourceGroups/khupragenics-rg/providers/Microsoft.Web/sites/khupragenics-app
+  973  terraform rm azurerm_linux_web_app.khupragenics_app.
+  974  terraform rm azurerm_linux_web_app.khupragenics_app
+  975  terraform destory azurerm_linux_web_app.khupragenics_app
+  976  terraform destroy azurerm_linux_web_app.khupragenics_app
+  977  terrafom destory -target=azurerm_linux_web_app.khupragenics_app
+  978  terraform destory -target=azurerm_linux_web_app.khupragenics_app
+  979  terraform destroy -target=azurerm_linux_web_app.khupragenics_app
+  980  terraform apply
+  981  terraform destroy -target=azurerm_linux_web_app.khupragenics_app
+  982  terraform apply
+  983  echo one & echo 2
+  984  echo one && echo 2
+  985  terraform plan
+  986  terraform apply -f
+  987  terraform apply --help
+  988  terraform apply -auto-approve
+  989  terraform destroy -target=azurerm_linux_web_app.khupragenics_app
+  990  terraform apply -auto-approve
+  991  mkdir -p /tmp/toknow
+  992  terraform destroy 
+  993  terraform apply -auto-approve
+  994  terraform destroy 
+  995  terraform init
+  996  terraform apply -auto-approve
+  997  cd ..
+  998  mkdir project-khupragenics-tf-new
+  999  code project-khupragenics-tf-new/
+ 1000  cd -
+ 1001  terraform destroy 
+ 1002  git plan
+ 1003  terraform plan
+ 1004  terraform fmt
+ 1005  terraform plan
+ 1006  terraform fmt
+ 1007  terraform plan
+ 1008  terraform fmt
+ 1009  terraform plan
+ 1010  terraform fmt
+ 1011  terraform plan
+ 1012  terraform apply -auto-approve
+ 1013  terraform fmt
+ 1014  terraform plan
+ 1015  terraform fmt
+ 1016  terraform plan
+ 1017  terraform apply -auto-approve
+ 1018  terraform import azurerm_source_control_token.khupragenics_git_token /providers/Microsoft.Web/sourceControls/GitHub
+ 1019  terraform apply -auto-approve
+ 1020  terraform destroy 
+ 1021  timedatectl 
+ 1022  export TF_LOG="DEBUG"
+ 1023  terraform plan
+ 1024  az logout
+ 1025  az login --use-device-code
+ 1026  terraform plan
+ 1027  echo "$(dig management.azure.com | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}$")   management.azure.com" >> /etc/hosts
+ 1028  sudo echo "$(dig management.azure.com | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}$")   management.azure.com" >> /etc/hosts
+ 1029  dig management.azure.com | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}$")   management.azure.com"
+ 1030  dig management.azure.com | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}$") 
+ 1031  dig management.azure.com 
+ 1032  sudo echo "$(dig management.azure.com | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}$")   management.azure.com" 
+ 1033  sudo echo "$(dig management.azure.com | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}$")   management.azure.com" >> /etc/hosts
+ 1034  sudo echo "$(dig management.azure.com | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}$")   management.azure.com" >> sudo /etc/hosts
+ 1035  cat /etc/hosts
+ 1036  sudo vi /etc/hosts
+ 1037  terraform plan
+ 1038  unset TF_LOG
+ 1039  terraform plan
+ 1040  az account show
+ 1041  az provider show --namespace Microsoft.Web --query "resourceTypes[?resourceType=='sites'].locations"
+ 1042  az provider show --namespace Microsoft.Web --query "resourceTypes[?resourceType=='sites'].apiVersions"
+ 1043  az provider list --output table
+ 1044  az provider list --output table | grep Microsoft.AVS
+ 1045  az provider list --query "[?registrationState=='Registered']" --output table
+ 1046  az provider register --namespace Microsoft.Cdn
+ 1047  az account show
+ 1048  az role assignment create     --assignee a232010e-820c-4083-83bb-3ace5fc29d0b     --role 4d97b98b-1d4f-4787-a291-c67834d212e7     --scope /subscriptions/28bbe0ce-16a2-4497-8d6d-daf4be152aff/resourceGroups/experiment/providers/Microsoft.Network/virtualNetworks/experiment
+ 1049  az role assignment create     --assignee a232010e-820c-4083-83bb-3ace5fc29d0b     --role 4d97b98b-1d4f-4787-a291-c67834d212e7     --scope /subscriptions/28bbe0ce-16a2-4497-8d6d-daf4be152aff/resourceGroups/experiment/providers/Microsoft.Network/virtualNetworks/base-canada
+ 1050  vi rootCA.crt
+ 1051  resourceGroupName="experiment"
+ 1052  clusterName="cassandratest"
+ 1053  az managed-cassandra cluster update   --resource-group $resourceGroupName   --cluster-name $clusterName   --client-certificates rootCA.crt 
+ 1054  terraform init
+ 1055  cd terraform/
+ 1056  terraform init
+ 1057  terraform plan
+ 1058  terraform apply
+ 1059  az account set --subscription 24e23c07-db2a-488b-b81a-25df03588050
+ 1060  az aks get-credentials --resource-group example-resource-group --name example-cluster
+ 1061  kubectl get deployments --all-namespaces=true
+ 1062  cd ..
+ 1063  ls -lrt
+ 1064  docker pull rust:1.68.1-bullseye
+ 1065  source ~/.bash_profile 
+ 1066  trivy image --exit-code 0 --format json --output ./patch.json --scanners vuln --vuln-type os --ignore-unfixed rust:1.68.1-bullseye
+ 1067  service docker status
+ 1068  docker build -t test-app:1.0 .
+ 1069  docker images
+ 1070  docker tag test-app:1.0 exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1071  docker images
+ 1072  az acr login --name exampleacr12345678.azurecr.io
+ 1073  docker push exampleacr12345678.azurecr.io/azure-voting-app-rust 
+ 1074  cd -
+ 1075  docker images
+ 1076  docker push exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha 
+ 1077  docker pull postgres:15.0-alpine
+ 1078  docker tag postgres:15.0-alpine exampleacr12345678.azurecr.io/postgres:15.0-alpine
+ 1079  docker push exampleacr12345678.azurecr.io/postgres:15.0-alpine
+ 1080  trivy image --exit-code 0 --format json --output ./patch.json --scanners vuln --vuln-type os --ignore-unfixed exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1081  source ~/.bash_profile 
+ 1082  trivy image --exit-code 0 --format json --output ./patch.json --scanners vuln --vuln-type os --ignore-unfixed exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1083  cat patch.json | jq '.Results[0].Vulnerabilities[] | .PkgID' | sort | uniq
+ 1084  sudo apt install jq
+ 1085  cat patch.json | jq '.Results[0].Vulnerabilities[] | .PkgID' | sort | uniq
+ 1086  source ~/.bash_profile 
+ 1087  copa
+ 1088  trivy image --exit-code 0 --format json --output ./patch.json --scanners vuln --vuln-type os --ignore-unfixed exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1089  copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1090  sudo copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1091  source ~/.bash_profile 
+ 1092  sudo copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1093  source ~/.bash_profile 
+ 1094  sudo copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1095  sudo copa
+ 1096  sudo /home/arun/softwares/copa
+ 1097  sudo /home/arun/softwares/copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1098  az acr show --name <acr_name> --query loginServer --output table
+ 1099  az acr show --name exampleacr12345678.azurecr.io --query loginServer --output table
+ 1100  docker login exampleacr12345678.azurecr.io
+ 1101  az acr credential show --name exampleacr12345678.azurecr.io
+ 1102  az acr update -n exampleacr12345678 --admin-enabled true
+ 1103  az acr credential show --name exampleacr12345678.azurecr.io
+ 1104  docker login exampleacr12345678.azurecr.io
+ 1105  sudo /home/arun/softwares/copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1106  sudo docker login exampleacr12345678.azurecr.io
+ 1107  sudo /home/arun/softwares/copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1108  cat /etc/docker/daemon.json
+ 1109  sudo vi /etc/docker/daemon.json
+ 1110  sudo systemctl status docker
+ 1111  service docker status
+ 1112  service docker restart
+ 1113  sudo service docker restart
+ 1114  service docker status
+ 1115  sudo /home/arun/softwares/copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1116  cat /etc/docker/daemon.json 
+ 1117  service docker status
+ 1118  service docker stop
+ 1119  sudo service docker stop
+ 1120  service docker status
+ 1121  sudo service docker start
+ 1122  service docker status
+ 1123  sudo /home/arun/softwares/copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1124  DOCKER_BUILDKIT=1
+ 1125  sudo /home/arun/softwares/copa patch -i exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -r patch.json -t v0.1-alpha-patched
+ 1126  docker ps
+ 1127  docker images
+ 1128  docker push exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched 
+ 1129  trivy image --exit-code 0 --format json --output ./patch-corrceted.json --scanners vuln --vuln-type os --ignore-unfixed exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1130  cat patch-corrceted.json | jq '.Results[0].Vulnerabilities[] | .PkgID' | sort | uniq
+ 1131  trivy image --severity HIGH --scanners vuln exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1132  trivy image --severity HIGH --scanners vuln exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1133  cd terraform/
+ 1134  terraform plan
+ 1135  terraform apply --auto-approve
+ 1136  mkdir -p ~/.config/notation/plugins/azure-kv
+ 1137  curl -Lo notation-azure-kv.tar.gz     https://github.com/Azure/notation-azure-kv/releases/download/v0.6.0/notation-azure-kv_0.6.0_Linux_amd64.tar.gz
+ 1138  ls -lrt
+ 1139  rm -rf notation-azure-kv.tar.gz 
+ 1140  az acr credential show --name exampleacr12345678.azurecr.io
+ 1141  az acr update -n exampleacr12345678 --admin-enabled true
+ 1142  az acr credential show --name exampleacr12345678.azurecr.io
+ 1143  notation sign -key ratify exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched -u exampleacr12345678 -p mKsFSYPPw/EZZpjwMGgHOm4V4y1OjfHTkpTRzhKyHk+ACRDO6Aip
+ 1144  source ~/.bash_profile 
+ 1145  notation sign -key ratify exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched -u exampleacr12345678 -p mKsFSYPPw/EZZpjwMGgHOm4V4y1OjfHTkpTRzhKyHk+ACRDO6Aip
+ 1146  notation sign --key ratify exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched -u exampleacr12345678 -p mKsFSYPPw/EZZpjwMGgHOm4V4y1OjfHTkpTRzhKyHk+ACRDO6Aip
+ 1147  AKV_NAME=examplekeyvault12345678
+ 1148  notation sign --key ratify exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched -u exampleacr12345678 -p mKsFSYPPw/EZZpjwMGgHOm4V4y1OjfHTkpTRzhKyHk+ACRDO6Aip
+ 1149  KEY_ID=$(az keyvault certificate show -n ratify --vault-name $AKV_NAME --query 'kid' -o tsv)
+ 1150  echo $KEY_ID 
+ 1151  notation key add $KEY_NAME --plugin azure-kv --id $KEY_ID
+ 1152  notation key add ratify --plugin azure-kv --id $KEY_ID
+ 1153  notation sign --key ratify exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched -u exampleacr12345678 -p mKsFSYPPw/EZZpjwMGgHOm4V4y1OjfHTkpTRzhKyHk+ACRDO6Aip
+ 1154  notation key ls
+ 1155  notation ls exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1156  docker images | grep postgres
+ 1157  notation sign --key ratify exampleacr12345678.azurecr.io/exampleacr12345678.azurecr.io/postgres:15.0-alpine -u exampleacr12345678 -p mKsFSYPPw/EZZpjwMGgHOm4V4y1OjfHTkpTRzhKyHk+ACRDO6Aip
+ 1158  notation sign --key ratify exampleacr12345678.azurecr.io/postgres:15.0-alpine -u exampleacr12345678 -p mKsFSYPPw/EZZpjwMGgHOm4V4y1OjfHTkpTRzhKyHk+ACRDO6Aip
+ 1159  helm repo add gatekeeper https://open-policy-agent.github.io/gatekeeper/charts
+ 1160  helm repo ls
+ 1161  helm repo --help
+ 1162  kubectl get pods
+ 1163  helm install gatekeeper/gatekeeper --name-template=gatekeepr --namespace gatekeeper-system --create-namespace -set enableExternalData=true --set validatingWebhookTimeoutSeconds=5 --set mutatingWebhookTimeoutSeconds=2
+ 1164  helm install gatekeeper/gatekeeper --name-template=gatekeepr --namespace gatekeeper-system --create-namespace --set enableExternalData=true --set validatingWebhookTimeoutSeconds=5 --set mutatingWebhookTimeoutSeconds=2
+ 1165  kubectl get ns
+ 1166  helm list -n gatekeeper-system
+ 1167  helm uninstall gatekeepr -n gatekeeper-system
+ 1168  helm install gatekeeper/gatekeeper --name-template=gatekeeper --namespace gatekeeper-system --create-namespace --set enableExternalData=true --set validatingWebhookTimeoutSeconds=5 --set mutatingWebhookTimeoutSeconds=2
+ 1169  kubectl get all --namespace gatekeeper
+ 1170  kubectl get all --namespace gatekeeper-system
+ 1171  helm repo add ratify https://deislabs.github.io/ratify  
+ 1172  kubectl get pods
+ 1173  helm install ratify ratify/ratify --atomic --namespace gatekeeper-system --set akvCertConfig.enabled=true --set akvCertConfig.vaultURI=https://examplekeyvault12345678.vault.azure.net/ --set akvCertConfig.certName=ratify --set akvCertConfig.tenantId=1f5b6ed9-a206-47ba-85c0-5b11f7e58dcf --set oras.authProviders.azureWorkloadIdentityEnabled=true --set azureWorkloadIdentity.clientId=498ff08e-f1de-4fa8-abb8-41763a667556 --dry-run
+ 1174  helm install ratify ratify/ratify --atomic --namespace gatekeeper-system --set akvCertConfig.enabled=true --set akvCertConfig.vaultURI=https://examplekeyvault12345678.vault.azure.net/ --set akvCertConfig.cert1Name=ratify --set akvCertConfig.tenantId=1f5b6ed9-a206-47ba-85c0-5b11f7e58dcf --set oras.authProviders.azureWorkloadIdentityEnabled=true --set azureWorkloadIdentity.clientId=498ff08e-f1de-4fa8-abb8-41763a667556 --dry-run
+ 1175  helm install ratify ratify/ratify --atomic --namespace gatekeeper-system --set akvCertConfig.enabled=true --set akvCertConfig.vaultURI=https://examplekeyvault12345678.vault.azure.net/ --set akvCertConfig.cert1Name=ratify --set akvCertConfig.tenantId=1f5b6ed9-a206-47ba-85c0-5b11f7e58dcf --set oras.authProviders.azureWorkloadIdentityEnabled=true --set azureWorkloadIdentity.clientId=498ff08e-f1de-4fa8-abb8-41763a667556 
+ 1176  cd ..
+ 1177  wget https://deislabs.github.io/ratify/library/default/template.yaml
+ 1178  wget https://deislabs.github.io/ratify/library/default/samples/constraint.yaml
+ 1179  cat constraint.yaml 
+ 1180  kubectl apply -f template.yaml 
+ 1181  kubectl get constrainttemplate.templates.gatekeeper.sh/ratifyverification
+ 1182  kubectl get constrainttemplate.templates.gatekeeper.sh/ratifyverification -n gatekeeper-system
+ 1183  kubectl apply -f constraint.yaml 
+ 1184  kubectl run unsigned --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1185  kubectl run unsigned --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1186  kubectl run --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1187  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1188  kubectl delete -f constraint.yaml 
+ 1189  kubectl delete -f template.yaml 
+ 1190  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1191  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1192  kubectl delete pod/test
+ 1193  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1194  kubectl delete pod/test
+ 1195  kubectl apply -f template.yaml 
+ 1196  kubectl apply -f constraint.yaml 
+ 1197  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1198  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1199  history
+ 1200  az keyvault certificate show -n ratify --vault-name $AKV_NAME --query 'kid' -o tsv
+ 1201  notation key ls
+ 1202  notation ls exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1203  notation ls exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1204  notation ls exampleacr12345678.azurecr.io/postgres@sha256:96cd07a2f61aa19fbaee10ca9677412674678815cfba9f6964b18818f3b3afa4
+ 1205  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched
+ 1206  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha
+ 1207  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha -namespace test
+ 1208  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha --namespace test
+ 1209  kubectl create namespace test
+ 1210  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha --namespace test
+ 1211  kubectl delete pod/test --namespace test
+ 1212  kubectl apply -f constraint.yaml 
+ 1213  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha --namespace test
+ 1214  kubectl run test --image exampleacr12345678.azurecr.io/azure-voting-app-rust:v0.1-alpha-patched --namespace test
+ 1215  cd terraform/
+ 1216  terrafomr plan --destroy
+ 1217  terraform plan --destroy
+ 1218  history > history.txt
